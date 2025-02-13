@@ -190,6 +190,71 @@ Imagine you're streaming a video on Netflix using 5G:
 🔹 SFC placement is about deciding where in the network to place these functions:
 
 📌 The challenge is to decide where to place functions to balance performance and cost.
+SFC Placement in 5G: Key Points
+
+1. DU (Distributed Unit) Placement
+
+✅ Latency: Very low (fastest response).
+✅ Computing Power: Low (limited processing capacity).
+✅ Bandwidth Usage: High (processes more data locally).
+✅ Best for Applications:
+
+Real-time applications (gaming, AR/VR, self-driving cars).
+
+Ultra-low latency AI processing (e.g., robotics, remote surgery).
+✅ Challenges:
+
+Limited computing resources.
+
+Can get overloaded with too many requests.
+
+
+2. CU (Centralized Unit) Placement
+
+✅ Latency: Medium (balances speed and efficiency).
+✅ Computing Power: Medium (better than DU, but less than 5GC).
+✅ Bandwidth Usage: Balanced.
+✅ Best for Applications:
+
+Cloud gaming (e.g., Stadia, Xbox Cloud Gaming).
+
+Video streaming & AI inference (e.g., Netflix, YouTube, AI-based recommendations).
+
+IoT device processing (smart cities, healthcare monitoring).
+✅ Challenges:
+
+Requires good resource management to prevent bottlenecks.
+
+
+3. 5GC (5G Core Network) Placement
+
+✅ Latency: High (slowest response).
+✅ Computing Power: High (most powerful processing capabilities).
+✅ Bandwidth Usage: Low (optimized for bulk data processing).
+✅ Best for Applications:
+
+Non-real-time AI processing (e.g., big data analytics, machine learning models).
+
+Cloud computing services (e.g., enterprise applications, large-scale storage).
+✅ Challenges:
+
+Not suitable for real-time applications (too much delay).
+
+
+
+---
+
+📌 Key Takeaways:
+
+DU placement = Best for ultra-low latency applications but limited resources.
+
+CU placement = Best for balancing speed and computing power.
+
+5GC placement = Best for large-scale computing but not for real-time services.
+
+
+Would you like these points included in the PowerPoint presentation? 🚀
+
 
 
 ---
