@@ -335,15 +335,193 @@ Findings:
 ✅ Paper 2 (Latency & Mobility-Aware) → Focuses on latency + mobility, uses MILP.
 ✅ Both papers use heuristic algorithms for real-world scalability.
 ✅ Paper 2 is more practical for mobile users, reducing interruptions.
+4.3 Paper 3: "Orchestrating End-to-End Slices in 5G Networks"
+
+Title:
+
+📌 Orchestrating End-to-End Slices in 5G Networks
+
+Authors:
+
+📝 Davit Harutyunyan, Riccardo Fedrizzi, Nashid Shahriar, Raouf Boutaba, Roberto Riggio
 
 
 ---
 
-Would You Like?
+Objective:
 
-📌 A PowerPoint Presentation summarizing everything?
-📌 Diagrams or animations to explain concepts visually?
+🔹 This paper focuses on End-to-End (E2E) Network Slicing, ensuring efficient resource allocation in 5G networks.
+🔹 It compares different E2E slice placement strategies using Mixed-Integer Linear Programming (MILP) and a heuristic algorithm.
+🔹 The goal is to reduce Virtual Network Function (VNF) migrations, optimize network utilization, and maintain Quality of Service (QoS).
 
-Let me know how I can structure it for you! 🚀
+
+---
+
+Challenges Addressed:
+
+✅ Diverse 5G Requirements:
+
+eMBB (Enhanced Mobile Broadband) → High-speed internet.
+
+mMTC (Massive Machine-Type Communications) → IoT, sensors, low-power devices.
+
+URLLC (Ultra-Reliable Low Latency Communications) → Real-time applications like autonomous vehicles.
+
+
+✅ Network Slicing Complexity:
+
+5G must serve multiple services with different requirements simultaneously.
+
+Efficient slice placement is needed to avoid wasting resources.
+
+
+✅ VNF Placement & Migration Issues:
+
+VNFs are virtualized network components like firewalls, load balancers, and session management functions (SMF, UPF, AMF).
+
+Moving VNFs frequently increases latency and disrupts services.
+
+
+✅ Resource Management Across DU, CU, and 5GC:
+
+DUs (Edge Nodes) have limited computing power.
+
+CUs (Mid-tier Nodes) balance latency and computing.
+
+5GC (Core) has high processing power but adds latency.
+
+Optimal placement ensures smooth operation while reducing costs.
+
+
+
+---
+
+Optimization Approach:
+
+🔸 MILP (Mixed-Integer Linear Programming) Formulation:
+
+Three strategies compared:
+
+1. Minimizing bandwidth consumption → Saves network resources.
+
+
+2. Minimizing service provisioning cost → Reduces expenses.
+
+
+3. Minimizing VNF migrations → Ensures stability and efficiency.
+
+
+
+
+🔸 Heuristic Algorithm:
+
+Faster than MILP for large-scale networks.
+
+Prioritizes minimizing VNF migrations to maintain service quality.
+
+
+
+---
+
+Findings:
+
+📍 MILP-based methods are effective but take longer to compute.
+📍 Heuristic algorithm provides near-optimal performance in significantly less time.
+📍 Minimizing VNF migrations results in a more stable network and better user experience.
+📍 Balancing network utilization across DU, CU, and 5GC is key to improving efficiency.
+
+📌 Advantage Over Previous Papers:
+✅ Considers entire 5G slice orchestration, including RAN (gNBs) and Core Network.
+✅ Optimizes both bandwidth and computing resource allocation.
+✅ Uses advanced heuristics to scale better than MILP-only approaches.
+
+
+---
+
+3.4 Additional Key Concepts & Jargon for Understanding This Paper
+
+📌 Key Terms Explained Simply:
+
+🔹 End-to-End (E2E) Network Slicing: A technique that divides the 5G network into customized virtual slices, each dedicated to a specific type of service (e.g., gaming, IoT, remote surgery).
+
+🔹 Network Function Virtualization (NFV): Replaces hardware-based network functions with software-based versions (VNFs).
+
+🔹 VNF (Virtual Network Function): A software-defined version of network functions like firewalls, traffic optimizers, and session managers.
+
+🔹 Virtual Network Embedding (VNE): The process of placing virtual network functions (VNFs) onto physical infrastructure (DU, CU, 5GC).
+
+🔹 MILP (Mixed-Integer Linear Programming): A mathematical optimization method that finds the best solution while considering both integer and decimal values.
+
+🔹 Heuristic Algorithm: A faster but approximate method to find a good enough solution without requiring excessive computational power.
+
+
+---
+
+5. Final Takeaways (Including Paper 3)
+
+✅ Paper 1 (Latency-Aware SFC Placement) → Focuses on latency reduction, uses ILP.
+✅ Paper 2 (Latency & Mobility-Aware SFC Placement) → Adds mobility management, uses MILP.
+✅ Paper 3 (E2E Slice Orchestration) → Optimizes entire network slicing, uses MILP + Heuristic Algorithm.
+✅ Network slicing ensures different 5G services get the resources they need efficiently.
+✅ Minimizing VNF migrations improves network stability and user experience.
+
+Would you like this included in the PowerPoint? 🚀
+
+
+
+Relationship Between Virtual Service Functions (VSFs) and Network Slicing in 5G
+
+
+---
+
+1. What are Virtual Service Functions (VSFs)?
+
+📌 Definition:
+Virtual Service Functions (VSFs) are software-based versions of traditional network functions (like firewalls, load balancers, and traffic optimizers).
+
+🔹 Example:
+
+In 4G networks, a firewall was a physical device in a data center.
+
+In 5G, the firewall is now a software function running on virtual machines (VMs) or cloud servers.
+
+
+📌 Key Benefit:
+✅ Flexible deployment → Can be placed anywhere in the 5G network (DU, CU, or 5GC).
+✅ Scalable → Can increase or decrease based on demand.
+✅ Cheaper → No need for expensive dedicated hardware.
+
+
+---
+
+2. What is Network Slicing?
+
+📌 Definition:
+Network slicing is the process of creating multiple virtual networks (slices) on a shared physical infrastructure.
+
+🔹 Each slice is optimized for a specific application (e.g., gaming, IoT, self-driving cars).
+🔹 Each slice requires certain network functions to work efficiently.
+
+📌 Key Benefit:
+✅ Ensures different applications get the resources they need.
+✅ Reduces congestion by separating traffic into dedicated slices.
+
+
+---
+
+3. How VSFs and Network Slicing Work Together
+
+🔹 Network slicing creates different virtual networks for different services.
+🔹 Each slice needs specific network functions (firewalls, load balancers, video transcoders).
+🔹 These functions are implemented as Virtual Service Functions (VSFs) and placed where they are most needed.
+
+📌 Example: How VSFs Are Placed in Network Slicing
+
+📌 Key Takeaways:
+✅ Network slices are virtual networks tailored for specific needs.
+✅ VSFs provide the essential functions that each slice requires.
+✅ Proper placement of VSFs ensures the best performance for different applications.
+
+Would you like diagrams or slides to illustrate this better? 🚀
 
 
